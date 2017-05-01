@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class AppService {
 
-  private serverURL: string = 'localhost:8888';
+  private serverURL: string = 'http://localhost:8888';
   private headers: Headers = new Headers(
     {
       'Accept': 'application/json',
@@ -56,7 +56,7 @@ export class AppService {
 
     let url = this.getUrl(endpoint);
     let op = this.getOptions(options);
-    
+
     return this.http.delete(url, op);
   }
 }

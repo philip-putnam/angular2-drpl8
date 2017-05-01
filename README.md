@@ -1,28 +1,22 @@
-# Angular2Drpl8
+# Drupal 8 + Angular 2, using Angular-CLI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+By: Philip Putnam
 
-## Development server
+## Anguarl 2 side, using Angular-CLI
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Planning
 
-## Code scaffolding
+1. npm install -g @angular/cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+## Setup
 
-## Build
+This setup instruction requires drush & composer on the command line
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+This setup/github works in conjunction with a "partner" github that contains the Drupal 8 files, you will need to download both projects and place them in the same parent directory.
 
-## Running unit tests
+Drupal 8 files: https://github.com/philip-putnam/drupal8-CORS
+Angular 2 files: https://github.com/philip-putnam/angular2-drpl8
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. drush dl cors
+2. drush en cors
+3. composer require stack-cors

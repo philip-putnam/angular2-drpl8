@@ -6,10 +6,12 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppService } from './services/app.service';
 import { BlogService } from './services/blog.service';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

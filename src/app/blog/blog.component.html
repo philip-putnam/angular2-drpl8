@@ -1,3 +1,8 @@
 <p>blog works!</p>
 
 <a routerLink='' routerLinkActive='current'>Home</a>
+
+<div *ngFor='let post of posts'>
+  <h3>{{ post.title[0].value }}</h3>
+  <div [innerHTML]='post.body[0].value'></div>
+</div>

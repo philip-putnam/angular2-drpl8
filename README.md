@@ -17,6 +17,5 @@ This setup/github works in conjunction with a "partner" github that contains the
 Drupal 8 files: https://github.com/philip-putnam/drupal8-CORS
 Angular 2 files: https://github.com/philip-putnam/angular2-drpl8
 
-1. drush dl cors
-2. drush en cors
-3. composer require stack-cors
+1. npm install
+2. bower install

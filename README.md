@@ -7,6 +7,9 @@ By: Philip Putnam
 # Planning
 
 1. npm install -g @angular/cli
+2. bower install bootstrap --save
+3. npm install node-sass --save-dev
+4. ng set defaults.styleExt scss (or ng new <project-name> --style=sass)
 
 ## Setup
 

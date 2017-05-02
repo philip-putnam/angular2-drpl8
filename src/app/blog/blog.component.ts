@@ -4,7 +4,7 @@ import { BlogService } from '../services/blog.service';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
 
@@ -25,6 +25,10 @@ export class BlogComponent implements OnInit {
 
       console.log(err);
     })
+  }
+
+  show_alert() {
+    console.log("hello");
   }
 
 }

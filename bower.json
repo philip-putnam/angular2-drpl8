@@ -1,0 +1,17 @@
+{
+  "name": "angular2-drpl8",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/philip-putnam/angular2-drpl8",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

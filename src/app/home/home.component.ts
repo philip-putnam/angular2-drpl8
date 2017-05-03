@@ -13,7 +13,8 @@ export class HomeComponent implements OnInit {
   constructor(private loginService: LoginService) { }
 
   ngOnInit() {
-    
+
+    this.loginService.drupal_init();
 
   }
 

@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 export class AppService {
 
   private serverURL: string = 'http://localhost:8888';
+  private csrfToken: string;
   private headers: Headers = new Headers(
     {
       'Accept': 'application/json',
@@ -40,9 +41,32 @@ export class AppService {
   post(endpoint: string, body: any, options?: RequestOptionsArgs): Observable<Response>{
 
     let url = this.getUrl(endpoint);
-    let op = this.getOptions(options);
+    let op = new Headers(
+      {
+        'Accept': 'application/json',
+        'Content-Type': 'application/hal+jason',
+        'X-CSRF-Token': body['X-CSRF-Token']
+      }
+    );
 
-    return this.http.post(url, body, op);
+    let newNode = {
+      '_links': {
+        'type': {
+          'href': 'http://localhost:8888/rest/type/node/article'
+        }
+      },
+      'type': {
+        'target_id': 'article'
+      },
+      'title': {
+        'value': 'Example node title'
+      }
+    };
+
+    console.log(op);
+    this.http.post(url, newNode, op).subscribe(res => console.log(res));
+
+    return this.http.post(url, newNode, op);
   }
 
   put(endpoint: string, body: any, options?: RequestOptionsArgs): Observable<Response>{

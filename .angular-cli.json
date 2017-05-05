@@ -25,7 +25,8 @@
       "scripts": [
         "../bower_components/jquery/dist/jquery.js",
         "global-script.js",
-        "jdrupal.min.js"
+        "../node_modules/jDrupal/jdrupal.min.js",
+        "../bower_components/angular-drupal/build/angular-drupal.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.loginService.drupal_init();
+    this.loginService.postNode();
 
   }
 
